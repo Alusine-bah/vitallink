@@ -101,7 +101,7 @@ async function syncPendingData() {
         const visits = visitRequest.result;
         for (let visit of visits) {
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/visits', {
+                const response = await fetch('https://vitallink-api-m98f.onrender.com/api/visits', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(visit)
@@ -125,7 +125,7 @@ async function syncPendingData() {
         const waterSources = waterRequest.result;
         for (let water of waterSources) {
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/water', {
+                const response = await fetch('https://vitallink-api-m98f.onrender.com/api/water', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(water)
