@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalLink - CHW Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>VitalLink</h1>
+        <div id="status-badge" onclick="toggleSimulation()" style="cursor: pointer;" title="Click to simulate offline mode">Online</div>
+    </header>
+
+    <main>
+        <!-- HEALTH VISIT FORM -->
+        <section class="card">
+            <h2>Log Health Visit</h2>
+            <form id="visitForm">
+                <label>CHW ID:</label>
+                <input type="text" id="chw_id" required placeholder="e.g. CHW-001">
+
+                <label>Patient Age:</label>
+                <input type="number" id="patient_age" required placeholder="e.g. 25">
+
+                <label>Patient Sex:</label>
+                <select id="patient_sex">
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+
+                <label>Suspected Disease:</label>
+                <select id="suspected_disease">
+                    <option value="Malaria">Malaria</option>
+                    <option value="Cholera">Cholera</option>
+                    <option value="Measles">Measles</option>
+                    <option value="Diarrhea">Diarrhea</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">Save Visit</button>
+            </form>
+        </section>
+
+        <!-- WATER SOURCE FORM -->
+        <section class="card">
+            <h2>Log Water Source</h2>
+            <form id="waterForm">
+                <label>CHW ID:</label>
+                <input type="text" id="water_chw_id" required placeholder="e.g. CHW-001">
+
+                <label>Village Name:</label>
+                <input type="text" id="village_name" required placeholder="e.g. Rokupr">
+
+                <label>Source Type:</label>
+                <select id="source_type">
+                    <option value="Well">Well</option>
+                    <option value="Borehole">Borehole</option>
+                    <option value="River">River</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Rainwater">Rainwater</option>
+                </select>
+
+                <label>Is the water safe?</label>
+                <select id="is_safe">
+                    <option value="true">Yes (Safe)</option>
+                    <option value="false">No (Unsafe)</option>
+                </select>
+
+                <button type="submit">Save Water Check</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
